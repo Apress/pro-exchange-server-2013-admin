@@ -1,0 +1,36 @@
+SET verbose on
+SET context persistent
+
+# Exclude other writers on Exchange Server
+# Can be retrieved using VSSADMIN List Writers
+Writer Exclude {d61d61c8-d73a-4eee-8cdd-f6f9786b7124}
+Writer Exclude {75dfb225-e2e4-4d39-9ac9-ffaff65ddf06}
+Writer Exclude {0bada1de-01a9-4625-8278-69e735f39dd2}
+Writer Exclude {e8132975-6f93-4464-a53e-1050253ae220}
+Writer Exclude {be000cbe-11fe-4426-9c58-531aa6355fc4}
+Writer Exclude {1072ae1c-e5a7-4ea1-9e4a-6f7964656570}
+Writer Exclude {afbab4a2-367d-4d15-a586-71dbb18f8485}
+Writer Exclude {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
+Writer Exclude {542da469-d3e1-473c-9f4f-7847f01fc64f}
+Writer Exclude {4969d978-be47-48b0-b100-f328f07ac1e0}
+Writer Exclude {a6ad56c2-b509-4e6c-bb19-49d8f43532f0}
+Writer Exclude {2a40fd15-dfca-4aa8-a654-1f8c654603f6}
+Writer Exclude {7e47b561-971a-46e6-96b9-696eeaa53b2a}
+Writer Exclude {41e12264-35d8-479b-8e5c-9b23d1dad37e}
+Writer Exclude {59b1f0cf-90ef-465f-9609-6ca8b2938366}
+
+# Exchange writer is required
+Writer Verify {76fe1ac4-15f7-4bcd-987e-8e1acb462fb7}
+
+# Take the actual snapshot
+begin backup
+add volume F: alias VSS_Backup_F
+add volume G: alias VSS_Backup_G
+
+create
+
+# Expose the snapshot as additional drive S:
+expose %VSS_Backup_F% S:
+expose %VSS_Backup_G% T:
+
+End backup

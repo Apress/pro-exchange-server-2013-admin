@@ -1,0 +1,1 @@
+Set-OrganizationConfig -DefaultPublicFolderIssueWarningQuota 1.9GB -DefaultPublicFolderProhibitPostQuota 2.3GB -DefaultPublicFolderMaxItemSize 200MB -DefaultPublicFolderDeletedItemRetention 30.00:00:00 -DefaultPublicFolderMovedItemRetention 30.00:00:00

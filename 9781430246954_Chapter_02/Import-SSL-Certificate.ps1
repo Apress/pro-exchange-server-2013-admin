@@ -1,0 +1,1 @@
+Import-ExchangeCertificate –Server AMS-EXCH01 -FileData ([Byte[]]$(Get-Content -Path "\\ams-ad01\MgmtShare\webmail_contoso_com.pfx" -Encoding byte -ReadCount 0)) -Password:(Get-Credential).password | Enable-ExchangeCertificate -Server AMS-EXCH01 -Services IIS

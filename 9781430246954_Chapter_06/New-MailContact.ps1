@@ -1,0 +1,1 @@
+New-MailContact -Name "John Williams" -FirstName John -LastName Williams -DisplayName "John Williams" -OrganizationalUnit contoso.com/accounts/contoso -ExternalEmailAddress "SMTP:JohnWilliams@hotmail.com"

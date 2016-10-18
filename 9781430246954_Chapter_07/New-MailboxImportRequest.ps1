@@ -1,0 +1,1 @@
+New-MailboxImportRequest -Mailbox Joe@contoso.com -FilePath \\AMS-FS01\PSTFiles\Archive2011.pst -IsArchive

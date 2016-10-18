@@ -1,0 +1,1 @@
+New-RetentionPolicyTag -Name "Delete after 14 days" -Type Personal -RetentionAction DeleteAndAllowRecovery -AgeLimitForRetention 14 -Comment "Items with this tag will be deleted after 14 days"

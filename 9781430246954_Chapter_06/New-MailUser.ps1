@@ -1,0 +1,1 @@
+New-MailUser -Name "John Smith" -Alias JSmith -OrganizationalUnit contoso.com/accounts/contoso -UserPrincipalName JSmith@contoso.com -FirstName John -Initials M -LastName Smith -DisplayName "John Smith" -Password (ConvertTo-SecureString 'Pass1word' -AsPlainText -Force) -ExternalEmailAddress "SMTP:JohnMSmith@hotmail.com"

@@ -1,0 +1,1 @@
+New-SendConnector -Name " Send Connector" -Internet -AddressSpaces "*" -DNSRoutingEnabled:$TRUE -SourceTransportServers "2012E15BE01","2012E15BE02"  -FrontendProxyEnabled:$TRUE
